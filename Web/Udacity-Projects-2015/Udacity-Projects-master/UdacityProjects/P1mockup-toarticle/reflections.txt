@@ -1,0 +1,22 @@
+You've learned a lot about web development so far. I want you to take a moment to write down your thoughts about web development here. Answer the following questions:
+  * What new skills have you learned?
+  * What has been easy?
+  * What has been difficult?
+  * How have you used the problem solving strategies from the first project to overcome challenges so far?
+
+---
+
+Your response goes here!
+
+* What new skills have you learned?
+I learned HTML5, CSS3 and JavaScript now. I learned this skills before but everytime i make my own projects, it reminds me that just learning skills and be skillful are different.
+
+* What has been easy?
+In fact I learned HTML and other web languages before so i can learn easier than before. but i think to be skillful is difficult than i thought.
+
+* What has been difficult?
+In programming there are to many ways to make same programs so that sometimes i'm confused about what method is the best in this program.
+In skill ability, i think i have some problem in CSS, because i think it's hard to make beautiful program.
+
+* How have you used the problem solving strategies from the first project to overcome challenges so far?
+If I have some problems, i almost question in online communities like stackoverflow or Programming communities that's in my country. And until now that method is good teacher for me.

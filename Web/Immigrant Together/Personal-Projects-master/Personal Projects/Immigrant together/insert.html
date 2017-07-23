@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Insert Page</title>
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+</head>
+<body>
+    <div class="title">데이터 입력</div>
+    <div class="under_title">
+        <ul class="notice">
+            <li>입력된 개인정보는 서버에 암호화되어 저장되며 입력된 개인정보는 <b><span style="color:red;">언제든지 수정 및 삭제가 가능합니다.</span></b></li>
+            <li>또한 입력된 개인정보는 이주공사 및 사익의 목표로하는 제3자에게 제공되지 않으며 이민 정보제공의 목적으로만 사용됩니다.</li>
+        </ul>
+    </div>
+    <div class="total_box">
+        <form method="post">
+            <div class="left_box">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>이름/닉네임</b></span>
+                    <input type="text" name="name" class="form-control" placeholder="이름 또는 닉네임" aria-describedby="basic-addon1">
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>이주공사</b></span>
+                    <input type="text" name="immigration_company" class="form-control" placeholder="계약 이주공사" aria-describedby="basic-addon1">
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>고용주</b></span>
+                    <input type="text" name="work_company" class="form-control" placeholder="고용주 (의무 업무 기간동안의 고용주)" aria-describedby="basic-addon1">
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>지역</b></span>
+                    <input type="text" name="location" class="form-control" placeholder="이주 지역 (ex : 노스캐롤라이나, 텍사스 등)" aria-describedby="basic-addon1">
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>계약일</b></span>
+                    <input type="date" name="contract_date" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>현재 진행상황</b></span>
+                    <select name="now_progress" class="form-control">
+                        <option>선택해주세요</option>
+                        <option>계약전</option>
+                        <option>계약 후 접수 대기</option>
+                        <option>LC 노동허가 접수</option>
+                        <option>LC 노동허가 승인</option>
+                        <option>LC 승인후 원본서명</option>
+                        <option>I140 접수 대기</option>
+                        <option>I140 승인 후 대기</option>
+                        <option>NVC 이관 후 대기</option>
+                        <option>비자피 납부 후 대기</option>
+                        <option>260/485 접수 후 대기</option>
+                        <option>패킷4 수령 후 대기</option>
+                        <option>신체 검사 후 대기</option>
+                        <option>인터뷰 후 대기</option>
+                        <option>랜딩 후 영주권 수령 완료</option>
+                    </select>
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>LC 오딧일자</b></span>
+                    <input type="date" name="lc_audit_date" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>i140 RFE 일자</b></span>
+                    <input type="date" name="i140_rfe_date" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>인터뷰 추가서류 제출일</b></span>
+                    <input type="date" name="interview_blue_date" class="form-control" />
+                </div>
+                <br />
+                <input type="submit" />
+            </div>
+
+            <div class="right_box">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>우선일자</b></span>
+                    <input type="date" name="priority_date" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>LC승인일</b></span>
+                    <input type="date" name="lc_approve_date" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>I140 접수일</b></span>
+                    <input type="date" name="i140_receive_date" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>I140 일반/급행 여부</b></span>
+                    <select name="i140_case" class="form-control">
+                        <option>선택해주세요</option>
+                        <option>일반</option>
+                        <option>급행</option>
+                    </select>
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>I140 승인일</b></span>
+                    <input type="date" name="i140_approve_date" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>비자피 통보일</b></span>
+                    <input type="date" name="visa_fee_notice_date" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>비자피 납부일</b></span>
+                    <input type="date" name="visa_fee_pay_date" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>DS260 접수일</b></span>
+                    <input type="date" name="ds260_receive_date" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>DS260 승인일</b></span>
+                    <input type="date" name="ds260_approve_date" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>인터뷰 통보일</b></span>
+                    <input type="date" name="interview_notice_date" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>인터뷰 날짜</b></span>
+                    <input type="date" name="interview_date" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>비자 수령일</b></span>
+                    <input type="date" name="visa_receive_date" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>출국일</b></span>
+                    <input type="date" name="departure_date" class="form-control" />
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

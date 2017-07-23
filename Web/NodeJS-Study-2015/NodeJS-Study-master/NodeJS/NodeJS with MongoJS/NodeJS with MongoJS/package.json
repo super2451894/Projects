@@ -1,0 +1,10 @@
+{
+  "name": "NodeJS-with-MongoJS",
+  "version": "0.0.0",
+  "description": "NodeJS with MongoJS",
+  "main": "app.js",
+  "author": {
+    "name": "super",
+    "email": ""
+  }
+}

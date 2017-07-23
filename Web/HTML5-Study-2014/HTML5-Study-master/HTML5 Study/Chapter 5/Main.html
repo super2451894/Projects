@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>fibonacci</title>
+
+    <!-- Code -->
+
+    <script>
+        // 변수 선언
+        var worker = new Worker('Worker.js');
+
+        // 이벤트 연결
+        worker.onmessage = function (event) {
+            //출력
+            alert(event.data);
+        };
+
+        //데이터 전달
+        worker.postMessage(100);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

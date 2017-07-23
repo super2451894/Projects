@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>removePrefix()</title>
+    <script>
+        var removePrefix = (function () {
+            // Set Variable
+            var prefixes = ['webkit', 'ms', 'moz', 'o'];
+            // Uppercase 
+            var capitalize = function (name) {
+                return name.substr(0, 1).toUpperCase() + name.substr(1);
+            };
+            // Remove Prefix Funciton
+            return function (object, name) {
+                // remove prefix
+                prefixes.forEach(function (prefix) {
+                    object[name] = object[name] || object[prefix + capitalize(name)];
+                });
+            };
+        })();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

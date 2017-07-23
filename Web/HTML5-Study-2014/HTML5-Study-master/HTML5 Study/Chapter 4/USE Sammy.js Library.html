@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>USE Sammy.js</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="sammy.js"></script>
+
+    <!-- Page Route -->
+    <script>
+        var app = Sammy(function () {
+            this.get('#/white', function () {
+                $('html').css('background', 'white');
+            });
+            this.get('#/red', function () {
+                $('html').css('background', 'red');
+            });
+        });
+    </script>
+
+    <!-- Ready Page Complete -->
+    <script>
+        $(document).ready(function () {
+            app.run('#/white');
+        });
+    </script>
+</head>
+<body>
+    <a href="#/white">WHITE</a>
+    <a href="#/red">RED</a>
+</body>
+</html>

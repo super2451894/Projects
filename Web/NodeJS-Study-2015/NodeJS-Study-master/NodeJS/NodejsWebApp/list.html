@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>List Page</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    
+</head>
+<body>
+    <h1>List Page</h1>
+    <a href="/insert">INSERT DATA</a>
+    <hr/>
+    <table class="table table-striped table-bordered table-hover table-condensed" id="world_clock">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Model Number</th>
+            <th>Series</th>
+            <th>DELETE</th>
+            <th>EDIT</th>
+        </tr>
+        <% data.forEach(function(item,index) { %>
+        <tr>
+            <td><%= item.id %></td>
+            <td><%= item.name %></td>
+            <td><%= item.modelnumber %></td>
+            <td><%= item.series %></td>
+            <td><a href="/delete/<%= item.id %>">DELETE</a></td>
+            <td><a href="/edit/<%= item.id %>">EDIT</a></td>
+        </tr>
+        <% }); %>
+    </table>
+</body>
+</html>

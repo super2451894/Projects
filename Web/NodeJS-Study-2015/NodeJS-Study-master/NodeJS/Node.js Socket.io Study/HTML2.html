@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script src="/socket.io/socket.io.js"></script>
+    
+    <script>
+        window.onload = function () {
+            //Connect Socket
+            var socket = io.connect();
+
+            //Set Variable
+            var name = prompt('이름을 입력해주세요', '이름');
+
+            //Send Data
+            socket.emit('setname', name);
+
+            //Process Data
+            socket.on('responsename', function (data) {
+                alert(data);
+            });
+
+            //Connect Document Object Event
+            document.getElementById('button').onclick = function () {
+                socket.emit('getname');
+            };
+        };
+
+    </script>
+    <title>Project</title>
+</head>
+<body>
+    <button id="button">이름 가져오기</button>
+</body>
+</html>

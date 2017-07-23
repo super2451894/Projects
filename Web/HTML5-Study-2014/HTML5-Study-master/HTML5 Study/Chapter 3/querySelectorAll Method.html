@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>querySelector() Method</title>
+    <script>
+        window.addEventListener('load', function () {
+            //Set Variable
+            var header = document.querySelectorAll('h1');
+
+            //Change Style Properties
+            header[0].style.fontFamily = 'Helvetica';
+            header[0].style.color = 'white';
+            header[0].style.backgroundColor = 'black';
+
+            header[1].style.color = 'white';
+            header[1].style.backgroundColor = 'black';
+        });
+    </script>
+</head>
+<body>
+    <h1>Header</h1>
+    <h1>Header</h1>
+</body>
+</html>

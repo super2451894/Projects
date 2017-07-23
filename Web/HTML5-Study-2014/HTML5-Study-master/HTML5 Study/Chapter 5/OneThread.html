@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>One Thread Process Problems</title>
+    
+
+    <!-- 이 코드를 무한 반복으로 에러를 유발할수 있습니다!! 주의-->
+    <!-- Code -->
+    <script>
+        //객체 생성
+        var request = new XMLHttpRequest();
+
+        //이벤트 연결
+        request.onreadystatechange=function(){
+            if(request.readyState==4){
+                //웹 브라우저가 요청을 완료하면 이단위를 실행
+                alert(request.response);
+            }
+        };
+
+        // 객체 설정
+        request.open('GET','OneThread.html',true);
+
+        //웹브라우저에 웹요청 수행
+        request.send();
+
+        //정지
+        while(true){}
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

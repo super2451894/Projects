@@ -1,0 +1,15 @@
+{
+  "name": "Real-Time-Location-Trace-App",
+  "version": "0.0.0",
+  "description": "Real Time Location Trace App",
+  "main": "app.js",
+  "author": {
+    "name": "super",
+    "email": ""
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "jade": "*",
+    "stylus": "*"
+  }
+}

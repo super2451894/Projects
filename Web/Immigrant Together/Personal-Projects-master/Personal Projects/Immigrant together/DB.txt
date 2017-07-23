@@ -1,0 +1,9 @@
+name=?,immigration_company=?,work_company=?,location=?,now_progress=?,contract_date=?,priority_date=?,lc_approve_date=?,i140_receive_date=?,i140_case=?,i140_approve_date=?,visa_fee_notice_date=?,visa_fee_pay_date=?,ds260_receive_date=?,ds260_approve_date=?,interview_notice_date=?,interview_date=?,visa_receive_date=?,lc_audit_date=?,i140_rfe_date=?,interview_blue_date=?,departure_date
+
+
+
+('UPDATE i_data SET name=?,immigration_company=?,work_company=?,location=?,now_progress=?,contract_date=?,priority_date=?,lc_approve_date=?,i140_receive_date=?,i140_case=?,i140_approve_date=?,visa_fee_notice_date=?,visa_fee_pay_date=?,ds260_receive_date=?,ds260_approve_date=?,interview_notice_date=?,interview_date=?,visa_receive_date=?,lc_audit_date=?,i140_rfe_date=?,interview_blue_date=?,departure_date WHERE id=?', [body.name, body.immigration_company, body.work_company, body.location, body.now_progress, body.contract_date, body.priority_date, body.lc_approve_date, body.i140_receive_date, body.i140_case, body.i140_approve_date, body.visa_fee_notice_date, body.visa_fee_pay_date, body.ds260_receive_date, body.ds260_approve_date, body.interview_notice_date, body.interview_date, body.visa_receive_date, body.lc_audit_date, body.i140_rfe_date, body.interview_blue_date, body.departure_date, request.param('id')],function(){
+        //Response
+        response.redirect('/');
+    });
+});

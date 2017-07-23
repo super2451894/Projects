@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>XMLHttpRequest</title>
+
+
+    <!-- Code -->
+    <script>
+        //객체 생성
+        var request = new XMLHttpRequest();
+
+        //이벤트 연결
+        request.onreadystatechange = function () {
+            if (request.readyState == 4) {
+                //웹브라우저가 요청을 완료하면 이 단위를 실행
+                alert(request.response);
+            }
+        };
+
+        //객체를 설정
+        request.open('GET', 'XMLHttpRequest.html', true);
+
+        //웹 브라우저에 웹 요청을 수행할것을 명령
+        request.send();
+
+        //출력
+        console.log('요청을 보냄');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

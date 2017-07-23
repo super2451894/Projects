@@ -1,0 +1,1 @@
+﻿console.log('output : %d', 273);

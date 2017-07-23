@@ -1,0 +1,16 @@
+﻿body { background-color:#EDEDEF; }
+
+         .title {
+    background-color: #F75248;
+    font-size:21px;
+    font-weight: bold;
+    color:white;
+    padding:15px 20px;
+    line-height: 28px;
+    border:1px solid #D8362C;
+  }
+          .notice{
+    padding: 10px;
+    background-color: #FCF8E3;
+    border: 1px solid #FBEED5;
+  }

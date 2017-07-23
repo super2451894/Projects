@@ -1,0 +1,10 @@
+{
+  "name": "ConnectNodeJSwithMOngoJSModule",
+  "version": "0.0.0",
+  "description": "ConnectNodeJSwithMOngoJSModule",
+  "main": "server.js",
+  "author": {
+    "name": "super",
+    "email": ""
+  }
+}

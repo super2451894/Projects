@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Lobby Page</title>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        $(document).ready(function () {
+            //Execute Ajax
+            $.getJSON('/room', function (data) {
+                //Execute Repeat
+                $.each(data, function (index, item) {
+                    //Add Document Object
+                    $('<button></button>').attr({
+                        'data-room': item
+                    }).text('Room Number :' + item).button().appendTo('#container');
+                });
+            });
+
+            //Execute Socket Process
+            var socket = io.connect();
+            socket.on('create_room', function (data) {
+                //Add Document Object
+                $('<button></button>').attr({
+                    'data-room': data
+                }).text('Room Number :' + data).appendTo('#container');
+            });
+
+            //Connect Event
+            $(document).on('#container> button', 'click', function () {
+                //Set Variable
+                var room = $(this).attr('data-room');
+
+                //Move Page
+                location = '/canvas/' + room;
+            });
+
+            $('body>button').click(function () {
+                //Set Variable
+                var room = $('#room').val();
+
+                //Create Socket Event
+                socket.emit('create_room', room);
+
+                //Move Page
+                location = '/canvas/' + room;
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Real Time Canvas</h1>
+    <p>Connect Web Server With Socket.io</p>
+    <span>ROOM: </span>
+    <input id="room" />
+    <button>CREATE ROOM</button>
+    <hr />
+    <div id="container">
+
+    </div>
+</body>
+</html>

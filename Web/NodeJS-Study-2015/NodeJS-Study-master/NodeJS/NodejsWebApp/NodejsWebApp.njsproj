@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>NodejsWebApp</Name>
+    <RootNamespace>NodejsWebApp</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>5901cb7f-f1ff-435f-b1ad-8d1494b32e11</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>9-8 CRUB Application.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="6-13 Cookie.js" />
+    <Compile Include="6-16 Create HTTP 404 Page.js" />
+    <Compile Include="6-19 Use URL Properties to classify the Page.js" />
+    <Compile Include="6-2 Server Object with close method.js" />
+    <Compile Include="6-2 Server object with Event.js" />
+    <Compile Include="6-22 Classify the page with method Properties.js" />
+    <Compile Include="6-23 Get Request varibable Extract.js" />
+    <Compile Include="6-24 POST Response Data Extract.js" />
+    <Compile Include="6-26 request.post.js" />
+    <Compile Include="6-5 Simple Response Message.js" />
+    <Compile Include="6-6 Create Server.js" />
+    <Compile Include="6-7 Provide HTML FIles.js" />
+    <Compile Include="6-9 Image and Music Server.js" />
+    <Compile Include="7-10 Use Jade Module.js" />
+    <Compile Include="7-11 compile%28%29 method.js" />
+    <Compile Include="8-10 Logger Middleware.js" />
+    <Compile Include="8-11 Logger Middleware with Token.js" />
+    <Compile Include="8-12 Logger Middleware with default form.js" />
+    <Compile Include="8-13 Static Middleware.js" />
+    <Compile Include="8-14 Use Static Middleware to provide Image file.js" />
+    <Compile Include="8-15 Router Middleware.js" />
+    <Compile Include="8-16 app Object Method.js" />
+    <Compile Include="8-17 Use Router Module to Extract Variable.js" />
+    <Compile Include="8-18 Choose All.js" />
+    <Compile Include="8-19 Cookie Parse Middleware.js" />
+    <Compile Include="8-2 Express Module.js" />
+    <Compile Include="8-20 Use Cookie Parse Middleware to Extract Cookie.js" />
+    <Compile Include="8-23 Default Server Setting.js" />
+    <Compile Include="8-26 File Upload Set Middleware.js" />
+    <Compile Include="8-29 Session Middleware.js" />
+    <Compile Include="8-3 Express Module wit send%28%29 method.js" />
+    <Compile Include="8-30 First Connection.js" />
+    <Compile Include="8-31 Session%28%29 Method Options.js" />
+    <Compile Include="8-32 RESTful WebService.js" />
+    <Compile Include="8-33 DummyDB.js" />
+    <Compile Include="8-4 404 Code.js" />
+    <Compile Include="8-5 User-Agent Properties.js" />
+    <Compile Include="8-6 Response with User-Agent.js" />
+    <Compile Include="8-7 Use Param%28%29 method to Extract variable.js" />
+    <Compile Include="8-8 MiddleWare.js" />
+    <Compile Include="8-9 Use MiddleWare to add properties.js" />
+    <Compile Include="9-2 Connection Object Properties.js" />
+    <Compile Include="9-3 query%28%29 Method.js" />
+    <Compile Include="9-5 Exception Process.js" />
+    <Compile Include="9-6 Database Properties.js" />
+    <Compile Include="9-8 CRUB Application.js" />
+    <Compile Include="Cookie Output.js" />
+    <Compile Include="ejs.basic.js" />
+    <Compile Include="server.js" />
+    <Compile Include="Use Location Properties to move to other page.js" />
+    <Content Include="8-22 Login.html" />
+    <Content Include="8-25 FileUpload.html" />
+    <Content Include="ejsPage.ejs" />
+    <Content Include="HTMLPage.html" />
+    <Content Include="HTMLPage2.html" />
+    <Content Include="Index.html" />
+    <Content Include="insert.html" />
+    <Content Include="JadePage.jade" />
+    <Content Include="list.html" />
+    <Content Include="OtherPage.html" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

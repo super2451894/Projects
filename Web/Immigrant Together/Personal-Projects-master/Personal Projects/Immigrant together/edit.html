@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Edit Page</title>
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+</head>
+<body>
+    <div class="title">데이터 수정 페이지</div>
+    <div class="under_title">
+        <ul class="notice">
+            <li>입력된 개인정보는 서버에 암호화되어 저장되며 입력된 개인정보는 <b><span style="color:red;">언제든지 수정 및 삭제가 가능합니다.</span></b></li>
+            <li>또한 입력된 개인정보는 이주공사 및 사익의 목표로하는 제3자에게 제공되지 않으며 이민 정보제공의 목적으로만 사용됩니다.</li>
+        </ul>
+    </div>
+    
+    <div class="total_box">
+        <form method="post">
+            <div class="left_box">
+                <h4>필수입력사항</h4>
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>이름/닉네임</b></span>
+                    <input type="text" name="name" value="<%= data.name %>" class="form-control" placeholder="이름 또는 닉네임" aria-describedby="basic-addon1">
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>이주공사</b></span>
+                    <input type="text" name="immigration_company" value="<%= data.immigration_company %>" class="form-control" placeholder="계약 이주공사" aria-describedby="basic-addon1">
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>고용주</b></span>
+                    <input type="text" name="work_company" value="<%= data.work_company %>" class="form-control" placeholder="고용주 (의무 업무 기간동안의 고용주)" aria-describedby="basic-addon1">
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>지역</b></span>
+                    <input type="text" name="location" value="<%= data.location %>" class="form-control" placeholder="이주 지역 (ex : 노스캐롤라이나, 텍사스 등)" aria-describedby="basic-addon1">
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>계약일</b></span>
+                    <input type="date" name="contract_date" value="<%= data.contract_date %>" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>현재 진행상황</b></span>
+                    <select name="now_progress" value="<%= data.now_progress %>" class="form-control">
+                        <option>선택해주세요</option>
+                        <option>계약전</option>
+                        <option>계약 후 접수 대기</option>
+                        <option>LC 노동허가 접수</option>
+                        <option>LC 노동허가 승인</option>
+                        <option>LC 승인후 원본서명</option>
+                        <option>I140 접수 대기</option>
+                        <option>I140 승인 후 대기</option>
+                        <option>NVC 이관 후 대기</option>
+                        <option>비자피 납부 후 대기</option>
+                        <option>260/485 접수 후 대기</option>
+                        <option>패킷4 수령 후 대기</option>
+                        <option>신체 검사 후 대기</option>
+                        <option>인터뷰 후 대기</option>
+                        <option>랜딩 후 영주권 수령 완료</option>
+                    </select>
+                </div>
+                <br />
+                <h4>오딧, I140 RFE, 인터뷰 추가서류 제출 사항</h4>
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>LC 오딧일자</b></span>
+                    <input type="date" name="lc_audit_date" value="<%= data.lc_audit_date %>" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>i140 RFE 일자</b></span>
+                    <input type="date" name="i140_rfe_date" value="<%= data.i140_rfe_date %>" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>인터뷰 추가서류 제출일</b></span>
+                    <input type="date" name="interview_blue_date" value="<%= data.interview_blue_date %>" class="form-control" />
+                </div>
+                <br />
+                <input type="submit" />
+            </div>
+
+            <div class="right_box">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>우선일자</b></span>
+                    <input type="date" name="priority_date" value="<%= data.priority_date %>" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>LC승인일</b></span>
+                    <input type="date" name="lc_approve_date" value="<%= data.lc_approve_date %>" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>I140 접수일</b></span>
+                    <input type="date" name="i140_receive_date" value="<%= data.i140_receive_date %>" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>I140 일반/급행 여부</b></span>
+                    <select name="i140_case" value="<%= data.i140_case %>" class="form-control">
+                        <option>선택해주세요</option>
+                        <option>일반</option>
+                        <option>급행</option>
+                    </select>
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>I140 승인일</b></span>
+                    <input type="date" name="i140_approve_date" value="<%= data.i140_approve_date %>" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>비자피 통보일</b></span>
+                    <input type="date" name="visa_fee_notice_date" value="<%= data.visa_fee_notice_date %>" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>비자피 납부일</b></span>
+                    <input type="date" name="visa_fee_pay_date" value="<%= data.visa_fee_pay_date %>" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>DS260 접수일</b></span>
+                    <input type="date" name="ds260_receive_date" value="<%= data.ds260_receive_date %>" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>DS260 승인일</b></span>
+                    <input type="date" name="ds260_approve_date" value="<%= data.ds260_approve_date %>" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>인터뷰 통보일</b></span>
+                    <input type="date" name="interview_notice_date" value="<%= data.interview_notice_date %>" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>인터뷰 날짜</b></span>
+                    <input type="date" name="interview_date" value="<%= data.interview_date %>" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>비자 수령일</b></span>
+                    <input type="date" name="visa_receive_date" value="<%= data.visa_receive_date %>" class="form-control" />
+                </div>
+                <br />
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><b>출국일</b></span>
+                    <input type="date" name="departure_date" value="<%= data.departure_date %>" class="form-control" />
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <!--<div class="table-responsive">
+        <form method="post">
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered table-hover table-condensed table-responsive" id="world_clock">
+                    <tr>
+                        <th>ID</th>
+                        <th>이름/닉네임</th>
+                        <th>이주공사</th>
+                        <th>고용주</th>
+                        <th>지역</th>
+                        <th>현재진행상황</th>
+                        <th>계약일</th>
+                        <th>우선일자</th>
+                        <th>LC승인일</th>
+                        <th>LC원본승인일</th>
+                        <th>i140접수일</th>
+                        <th>i140 일반/급행</th>
+                        <th>RFE날짜</th>
+                        <th>i140승인일</th>
+                        <th>NVC이관일</th>
+                        <th>비자피납부일</th>
+                        <th>비자피확인일</th>
+                        <th>D260/485접수일</th>
+                        <th>260/485접수확인일</th>
+                        <th>패킷4수령일</th>
+                        <th>신체검사일</th>
+                        <th>인터뷰일자</th>
+                        <th>수정</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="id" value="<%= data.id %>" disabled /></td>
+                        <td><input type="text" name="name" value="<%= data.name %>" /></td>
+                        <td><input type="text" name="company" value="<%= data.company %>" /></td>
+                        <td><input type="text" name="employer" value="<%= data.employer %>" /></td>
+                        <td><input type="text" name="location" value="<%= data.location %>" /></td>
+                        <td>
+                            <select name="nowprogress">
+                                <option>선택해주세요</option>
+                                <option>계약전</option>
+                                <option>계약 후 접수 대기</option>
+                                <option>LC 노동허가 접수</option>
+                                <option>LC 노동허가 승인</option>
+                                <option>LC 승인후 원본서명</option>
+                                <option>I140 접수 대기</option>
+                                <option>I140 승인 후 대기</option>
+                                <option>NVC 이관 후 대기</option>
+                                <option>비자피 납부 후 대기</option>
+                                <option>260/485 접수 후 대기</option>
+                                <option>패킷4 수령 후 대기</option>
+                                <option>신체 검사 후 대기</option>
+                                <option>인터뷰 후 대기</option>
+                                <option>랜딩 후 영주권 수령 완료</option>
+                            </select>
+                        </td>
+                        <td><input type="date" name="contractdate" value="<%= data.contractdate %>" /></td>
+                        <td><input type="date" name="prioritydate" value="<%= data.prioritydate %>" /></td>
+                        <td><input type="date" name="lcapprovedate" value="<%= data.lcapprovedate %>" /></td>
+                        <td><input type="date" name="lcsignaturedate" value="<%= data.lcsignaturedate %>" /></td>
+                        <td><input type="date" name="i140receivedate" value="<%= data.i140receivedate %>" /></td>
+                        <td>
+                            <select name="i140value">
+                                <option>선택해주세요</option>
+                                <option>일반</option>
+                                <option>급행</option>
+                            </select>
+                        </td>
+                        <td><input type="date" name="rfedate" value="<%= data.rfedate %>" /></td>
+                        <td><input type="date" name="i140approvedate" value="<%= data.i140approvedate %>" /></td>
+                        <td><input type="date" name="nvctransferdate" value="<%= data.nvctransferdate %>" /></td>
+                        <td><input type="date" name="visafeedate" value="<%= data.visafeedate %>" /></td>
+                        <td><input type="date" name="visafeeconfirmdate" value="<%= data.visafeeconfirmdate %>" /></td>
+                        <td><input type="date" name="accept260485date" value="<%= data.accept260485date %>" /></td>
+                        <td><input type="date" name="finalacceptdate" value="<%= data.finalacceptdate %>" /></td>
+                        <td><input type="date" name="packet4date" value="<%= data.packet4date %>" /></td>
+                        <td><input type="date" name="phydate" value="<%= data.phydate %>" /></td>
+                        <td><input type="date" name="interviewdate" value="<%= data.interviewdate %>" /></td>
+                </table>
+                <input type="submit" />
+            </div>
+        </form>
+
+    </div>-->
+</body>
+</html>
